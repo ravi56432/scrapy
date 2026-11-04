@@ -1,0 +1,14 @@
+# sitecrawl — required
+# The tool runs with just these, but degrades if the optional ones are missing.
+httpx[http2]>=0.27      # async HTTP client + HTTP/2
+selectolax>=0.3.21      # Lexbor HTML parser (falls back to a slow regex parser)
+orjson>=3.9             # fast JSON for checkpoints
+tldextract>=5.0         # offline public-suffix list (subdomain detection)
+protego>=0.3            # robots.txt parsing
+curl_cffi>=0.7          # TLS/JA3 impersonation — the main anti-bot lever
+brotli>=1.1             # brotli decoding
+zstandard>=0.22         # zstd decoding
+
+# optional: browser fallback for JS challenges and SPA sites
+# (then also: python -m playwright install chromium)
+# playwright>=1.40
